@@ -22,6 +22,11 @@ public class RowData implements Comparable<RowData> {
         return this.propMap;
     }
 
+    /*
+    * give the record some properties
+    * @param keys list of new keys
+    * @param values list of new values
+    * */
     public void setProperty(List<String> keys, List<String> values) {
         for(int i = 0; i < keys.size(); i++) {
 //            if(!columns.contains(keys.get(i))) columns.add(keys.get(i));
@@ -33,6 +38,7 @@ public class RowData implements Comparable<RowData> {
         }
     }
 
+    // when extract columns from a record
     public List<String> getPropNames() {
         List<String> propNames = new ArrayList();
         if(this.id >= 0) propNames.add(Constant.ID_COL);
@@ -42,11 +48,17 @@ public class RowData implements Comparable<RowData> {
 
     public int getId() {return this.id;}
 
+    /*
+    * override the compareTo to serve the use of priority queue
+    * */
     @Override
     public int compareTo(RowData rowData) {
         return this.id - rowData.getId();
     }
 
+    /*
+    * When extract record into to csv
+    * */
     @Override
     public String toString() {
         String res = String.valueOf(getId()) + Constant.DIV_SYMB;

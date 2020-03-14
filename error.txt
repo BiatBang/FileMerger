@@ -1,0 +1,9 @@
+Errors that cause output error msg
+1. multiple id columns in html/csv file
+2. # col < id's index
+3. no id in html/csv
+4. html/csv file doesn't exist
+5. id col is empty or can't be parsed to integer
+
+Errors that terminate project
+1. the combined file is in use of other applications

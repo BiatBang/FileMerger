@@ -28,6 +28,11 @@ public class Merger {
         this.rMap = new HashMap();
     }
 
+    /*
+    * extract filenames from args[0]
+    * I first used file walker in Lambda, but lower versions don't support it
+    * Then I came back to this traditional way
+    * */
     public void getFileNames() {
         File file = new File(args[0]);
         List<String> nameList = new ArrayList();
@@ -35,16 +40,6 @@ public class Merger {
             nameList.add(args[0] + "/" + fname);
         }
         inputFiles = nameList.toArray(new String[0]);
-
-//        try (Stream<Path> walk = Files.walk(Paths.get(args[0]))) {
-//
-//            List<String> result = walk.filter(Files::isRegularFile)
-//                    .map(x -> x.toString()).collect(Collectors.toList());
-//            this.inputFiles = result.toArray(new String[0]);
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
     }
 
     /*

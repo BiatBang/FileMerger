@@ -3,4 +3,5 @@
 # java -classpath "dist/lib/*:lib/*" RecordMerger $*
 
 cd src
-java -classpath "dist/lib/*:../lib/*" RecordMerger "../data"
+javac -cp "../lib/*" *.java
+java -classpath "dist/lib/*:../lib/*:." RecordMerger "../data"

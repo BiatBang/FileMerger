@@ -8,6 +8,7 @@ public class ReaderFactory {
         facMap = new FactoryMap();
     }
 
+    // extract extension
     public String getExtension(String filename) {
         String ext = "";
         int dot = filename.lastIndexOf('.');
@@ -17,6 +18,11 @@ public class ReaderFactory {
         return ext;
     }
 
+    /*
+    * use filename to get a new instance of corresponding class
+    *
+    * @param filename file name
+    * */
     public IReadable getReader(String filename) {
         String ext = getExtension(filename);
         try {

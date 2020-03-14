@@ -8,7 +8,10 @@ public interface IReadable {
     * In order to make it extendable, define an interface
     * only provide a read method
     *
-    * @param
+    * @param input the input file
+    * @param rMap the hashmap of id -> info
+    * @param columns largest columns
+    *
     * */
-    public void read(String input, HashMap<Integer, RowData> rQueue, List<String> columns) throws IOException;
+    public void read(String input, HashMap<Integer, RowData> rMap, List<String> columns) throws IOException;
 }

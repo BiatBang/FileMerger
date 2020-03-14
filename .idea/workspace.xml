@@ -2,7 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="518f11cc-9b9d-40de-b404-6c4e42fe9b73" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data/fifth.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/forth.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/second.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/second.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/third.html" beforeDir="false" afterPath="$PROJECT_DIR$/data/third.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSVFileReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSVKit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSVKit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSVKit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FactoryMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FactoryMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTMLReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IReadable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IReadable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IReadable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Merger.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Merger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Merger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReaderFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReaderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReaderFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RecordMerger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RowData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RowData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RowData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/combined.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/combined.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +36,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Z54CNfbOq0HOTDQK6ybDORThoz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,7 +49,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -35,6 +60,7 @@
       <recent name="D:\JavaProject\java_test_2020" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaProject\java_test_2020" />
       <recent name="D:\JavaProject\java_test_2020\lib" />
       <recent name="D:\JavaProject\java_test_2020\src" />
     </key>
@@ -62,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584115492122</updated>
       <workItem from="1584115493341" duration="15773000" />
-      <workItem from="1584200585382" duration="10519000" />
+      <workItem from="1584200585382" duration="14042000" />
     </task>
     <servers />
   </component>

@@ -41,6 +41,7 @@ public class HTMLReader implements IReadable {
                     idIndex = i;
                     continue;
                 }
+                // why do you have multiple id's? ???
                 header += "(?)";
                 System.out.println(Constant.MUL_ID_COL_IN_HEADER);
             }
@@ -77,7 +78,7 @@ public class HTMLReader implements IReadable {
                     }
                     rowInfo.add(tr.children().get(i).text());
                 }
-
+                // the record has no id col
                 if(id != -1) {
                     RowData rd = new RowData(id);
                     rd.setProperty(headers, rowInfo);

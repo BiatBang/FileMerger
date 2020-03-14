@@ -9,6 +9,7 @@ import java.util.*;
 
 public class CSVKit {
     public static void clean(HashMap<Integer, RowData> rMap, List<String> columns) {
+        // if there are more columns than this record, use space to fill it
         for(RowData rd: rMap.values()) {
             for(String col: columns) {
                 if(!rd.getProperty().containsKey(col)) {
@@ -23,6 +24,7 @@ public class CSVKit {
     }
 
     public static void sort(HashMap<Integer, RowData> rMap, PriorityQueue<RowData> rQueue) {
+        // put the records into the priorityqueue
         for(Map.Entry<Integer, RowData> entry: rMap.entrySet()) {
             rQueue.offer(entry.getValue());
         }
@@ -38,7 +40,7 @@ public class CSVKit {
         CSVWriter csvWriter = null;
         try {
             outFile.createNewFile();
-
+            // here, use the BOM to make the csv's charset utf-8
             FileOutputStream fos = new FileOutputStream(output);
             byte[] bom = new byte[] { (byte)0xEF, (byte)0xBB, (byte)0xBF };
             fos.write(bom);
@@ -46,7 +48,7 @@ public class CSVKit {
             csvWriter = new CSVWriter(osw);
 
             String[] header = null;
-
+            // if there is no record, just headers
             if(rQueue.size() <= 0){
                 columns.add(0, Constant.ID_COL);
                 header = columns.toArray(new String[0]);
@@ -55,6 +57,7 @@ public class CSVKit {
 
             while(!rQueue.isEmpty()) {
                 RowData rd = rQueue.poll();
+                // since all records share one column set, let's see what's in 1st element
                 if(header == null) {
                     header = rd.getPropNames().toArray(new String[0]);
                     csvWriter.writeNext(header);

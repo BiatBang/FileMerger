@@ -1,0 +1,43 @@
+Note:
+--------
+I provided two scripts to run this program, one for windows (run.bat) and one for Linux (run.sh).
+(I don't have a mac laptop but I guess it works the same as Linux)
+In case the scripts don't work --
+
+In Windows:
+cd src -> go into src folder
+javac -cp "..\lib\*" *.java -> compile all java files with jars in lib\
+java -cp "..\lib\*"; RecordMerger "..\data" -> the args is only the path of the "FOLDER"
+
+In Linux:
+cd src -> go into src folder
+javac -cp "../lib/*" *.java -> compile all java files with jars in lib\
+java -classpath "dist/lib/*:../lib/*:." RecordMerger "../data" -> the args is only the path of the "FOLDER"
+
+1. Please don't use "data\", it won't work.
+2. After running, you are in the src folder. Please move upward if you want to see the root file.
+3. windows uses ";" as the end of the cp. Linux uses ":." as the end of the cp.
+
+Other notes:
+--------
+Thank you for reading my codes. I can explain in very detail if you are interested. I'll briefly list some important points:
+
+Q: Where is the output file?
+A: It's in the src/. It's lying in the main method, I chose not to modify that. Sorry
+   about the inconvenience.
+
+Q: How to store the merged data?
+A: In order to keep records unique, It's convenient to use HashMap. Then, in order to
+   order the records by ascending id, a PriorityQueue could be a good choice.
+
+Q: How to make the program extendable to more types of files?
+A: In FactoryMap.java, I wrote a facMap. The key is the extension of the file, the value
+   is the class name of its corresponding Reader. I used reflect to use the extension
+   string to get the class name and then create a new instance of reader. If users want
+   to add more, just append it into the map. Besides, new reader class need to implement
+   the IReadable interface. There's only a read() in it.
+
+Q: What if errors happen?
+A: I hate crashing. If the error is not so severe that the program has to crash, I tend
+   to let the user know, and skip that error. Therefore, even if the file doesn't exist,
+   the program won't crash.
