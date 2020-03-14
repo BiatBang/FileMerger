@@ -4,6 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
+import java.io.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -21,7 +22,7 @@ public class Merger {
      * @param inputFiles the name list of input files
      * @param outputFile the name of output file
      * */
-    public Merger(String[] args, String outputFile){
+    public Merger(String[] args, String outputFile) {
         this.args = args;
         this.outputFile = outputFile;
         this.columns = new ArrayList();
@@ -30,15 +31,22 @@ public class Merger {
     }
 
     public void getFileNames() {
-            try (Stream<Path> walk = Files.walk(Paths.get(args[0]))) {
-
-            List<String> result = walk.filter(Files::isRegularFile)
-                    .map(x -> x.toString()).collect(Collectors.toList());
-            this.inputFiles = result.toArray(new String[0]);
-
-        } catch (IOException e) {
-            e.printStackTrace();
+        File file = new File(args[0]);
+        List<String> nameList = new ArrayList();
+        for(String fname: file.list()) {
+            nameList.add(args[0] + "/" + fname);
         }
+        inputFiles = nameList.toArray(new String[0]);
+
+//        try (Stream<Path> walk = Files.walk(Paths.get(args[0]))) {
+//
+//            List<String> result = walk.filter(Files::isRegularFile)
+//                    .map(x -> x.toString()).collect(Collectors.toList());
+//            this.inputFiles = result.toArray(new String[0]);
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     /*
@@ -54,10 +62,10 @@ public class Merger {
          * we use a largest set of columns to be the final columns
          *
          * */
-        for(String input: inputFiles) {
+        for (String input : inputFiles) {
             // check it's extension and send to respective handler
             IReadable reader = new ReaderFactory().getReader(input);
-            if(reader != null) {
+            if (reader != null) {
                 reader.read(input, rMap, columns);
             }
         }
