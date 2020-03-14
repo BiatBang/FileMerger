@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="518f11cc-9b9d-40de-b404-6c4e42fe9b73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Merger.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Merger.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Merger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Merger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584115492122</updated>
       <workItem from="1584115493341" duration="15773000" />
-      <workItem from="1584200585382" duration="10189000" />
+      <workItem from="1584200585382" duration="10519000" />
     </task>
     <servers />
   </component>
