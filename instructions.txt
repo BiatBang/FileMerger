@@ -20,11 +20,17 @@ java -classpath "dist/lib/*:../lib/*:." RecordMerger "../data" -> the args is on
 
 Other notes:
 --------
-Thank you for reading my codes. I can explain in very detail if you are interested. I'll briefly list some important points:
+Thank you for reading my codes. I'll be very willing to explain in very detail if you are interested.
+I'll briefly list some important points:
 
 Q: Where is the output file?
 A: It's in the src/. It's lying in the main method, I chose not to modify that. Sorry
    about the inconvenience.
+
+Q: Any test cases?
+A: first.html and second.csv are good files, with no errors. third - sixth have different kinds of
+   problems, and there are comments of the errors. There is also an "error.txt", recording the kinds
+   of problems I can think of.
 
 Q: How to store the merged data?
 A: In order to keep records unique, It's convenient to use HashMap. Then, in order to
